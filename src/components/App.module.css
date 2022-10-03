@@ -1,0 +1,17 @@
+.App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    padding-bottom: 24px;
+  }
+
+.asd {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+.Loader {
+  display: flex;
+  justify-content: center;
+}
