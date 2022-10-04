@@ -41,7 +41,8 @@ export const App = () => {
           setStatus('nothingFound');
           return;
         }
-        setPictures([...pictures, ...res.hits]);
+        // setPictures([...pictures, ...res.hits]);
+        setPictures(prev => [...prev, ...res.hits])
         setTotalPictures(res.total);
         setStatus('resolved');
         setIsLoadMoreBtn(true);
@@ -50,7 +51,6 @@ export const App = () => {
         console.log('error is:', error);
         setStatus('rejected');
       });
-      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [request, page, API_KEY, PER_PAGE]);
 
   const saveRequest = newRequest => {
