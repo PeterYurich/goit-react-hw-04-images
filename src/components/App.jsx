@@ -20,9 +20,13 @@ export const App = () => {
   const [status, setStatus] = useState('idle');
 
   useEffect(() => {
+    if (request === '') {
+      return;
+    }
+
     setStatus('pending');
 
-    console.log(request)
+    console.log(request);
 
     fetch(
       `https://pixabay.com/api/?key=${API_KEY}&q=${request}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${PER_PAGE}&page=${page}`
