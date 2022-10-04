@@ -50,6 +50,7 @@ export const App = () => {
         console.log('error is:', error);
         setStatus('rejected');
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [request, page, API_KEY, PER_PAGE]);
 
   const saveRequest = newRequest => {
